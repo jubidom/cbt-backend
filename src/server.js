@@ -8,7 +8,7 @@ const __fileName = fileURLToPath(import.meta.url);
 const __dirName = path.dirname(__fileName);
 
 //.env config path
-const configPath = path.join(__dirName, "./config.env");
+const configPath = path.join(__dirName, "/config.env");
 dotenv.config({ path: configPath });
 
 const DB = process.env.DB_URL;
