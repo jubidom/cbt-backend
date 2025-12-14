@@ -49,8 +49,9 @@ const studentSchema = new mongoose.Schema({
     trim: true,
   },
 
-  discipline: {
+  department: {
     type: String,
+    enum: ["arts", "science"],
     required: [true, "Student must have a department"],
   },
 

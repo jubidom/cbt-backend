@@ -4,12 +4,7 @@ import { token } from "morgan";
 import Student from "../models/StudentModel.js";
 import asyncErrorHandler from "../utils/asyncErrorHandler.js";
 import ErrorHandler from "../utils/ErrorHandler.js";
-
-const signJWT = function (id) {
-  return jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: process.env.EXPIRESIN,
-  });
-};
+import { signJWT } from "../utils/signJWT.js";
 
 const signUp = asyncErrorHandler(async function (req, res, next) {
   let newStudentAccount = await Student.create({

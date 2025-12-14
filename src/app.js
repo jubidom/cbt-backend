@@ -22,5 +22,7 @@ app.use((req, res, next) => {
   );
 });
 
+//global error handler
 app.use(globalErrorController);
+
 export default app;
